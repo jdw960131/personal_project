@@ -114,12 +114,7 @@ img{border: none; vertical-align: top;}
     margin: 0 auto;
     
 }
-#section .sec_wrap{
-    /* position: relative; */
-    /* width: 100%; */
-    /* height: 100vh; */
-    /* overflow: hidden; */
-}
+
 #section .sec_wrap .section00{
     width: 100%;
     height: 100vh;
@@ -375,7 +370,7 @@ img{border: none; vertical-align: top;}
     margin-top: 400px;
 }
 #section .sec_wrap03 .bg{
-    margin-top: -400px;
+    margin-top: -350px;
     width: 100%;
     height: 420px;
     background-image: url(img/research_bg.jpg);
@@ -667,10 +662,10 @@ img{border: none; vertical-align: top;}
         width: 100%;
         height: 50vh;
         border: 1px solid yellow;
-
     }
     #section .sec_wrap .section00 img{
         width: 100%;
+        height: 100%;
     }
     #section .sec_wrap .service_banner{
         width: 100%;
@@ -831,13 +826,22 @@ img{border: none; vertical-align: top;}
         background-position: right;
         background-image: url(images/caret-right-solid.svg);
     }
-
+    #section .sec_wrap .section00{
+        width: 100%;
+        height: 35vh;
+        margin-top: 100px;
+        /* border: 1px solid yellow; */
+    }
+    #section .sec_wrap .section00 img{
+        width: 100%;
+    }
 
     #section .sec_wrap .service_banner{
         width: 100%;
-        height: 45vh;
+        height: 60vh;
+        margin-top: -80px;
         overflow: hidden;
-        border: 1px solid yellow;
+        /* border: 1px solid yellow; */
     }
 
     #section .sec_wrap .service_banner img{
@@ -849,9 +853,11 @@ img{border: none; vertical-align: top;}
     #section .sec_wrap .section01>h2{
         font-size: 3rem;
     }
+    #section .sec_wrap .section01 .services p{
+        display: none;
+    }
     #section .sec_wrap .section01 .banner{
-        width: 350px;
-        margin: 0 auto;
+        display: none;
     }
     #section .sec_wrap .section01 .banner .banner_txt{
         display: none;
