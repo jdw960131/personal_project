@@ -1,10 +1,11 @@
 $(document).ready(function(){
     $(".gnb>li").mouseenter(function(){
-        $(".gnb>li>.sub").stop().slideDown();
+        $(".menu").stop().addClass("move");
     })
     $(".gnb>li").mouseleave(function(){
-        $(".gnb>li>.sub").stop().slideUp()
+        $(".menu").stop().removeClass("move");
     })
+    
     $(".hamburger>img").click(function(){
         $(".side_menu").stop().animate({"right":"0%"});
     });

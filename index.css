@@ -13,18 +13,15 @@ img{border: none; vertical-align: top;}
 
 /* ------------------------------------------- */
 #header{
-    width: 100%;
-    height: 100vh;
-    background-image: url(img/header_bg.jpg);
-    box-sizing: border-box;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    position: absolute;
+    left: 0px;
+    top: 0px;
 }
+
 #header .menu{
     /* width: 1800px; */
     width: 100%;
-    height: 90px;
+    height: 100px;
     display: flex;
     margin: 0 auto;
     justify-content: space-between;
@@ -33,14 +30,13 @@ img{border: none; vertical-align: top;}
     z-index: 100;
     overflow: hidden;
     background-color: white;
+    transition: all 0.7s;
 }
-#header .menu:hover{
-    background-color: rgba(0,0,0, 0.5);
-    height: 390px;
+#header .menu.move{
+    /* background-color: rgba(0,0,0, 0.5); */
+    height: 320px;
 }
-/* #header .menu:hover a{
-    color: white;
-} */
+
 #header .menu .logo{
     width: 13%; height: 45px;
     padding: 30px 0px 0px 50px;
@@ -59,7 +55,7 @@ img{border: none; vertical-align: top;}
 }
 #header .menu .gnb>li{
     /* margin-right: 70px; */
-    width: 14vh;
+    width: 200px;
     /* padding: 35px 65px 0px; */
     /* background-color:aquamarine; */
     line-height: 35px;
@@ -69,25 +65,21 @@ img{border: none; vertical-align: top;}
 #header .menu .gnb>li:nth-child(6){
     margin-right: none;
 }
-#header .menu:hover .gnb>li>a{
-    color: white;
-}
+
 #header .menu .gnb>li>a>h2{
     font-size: 17px;
 }
 #header .menu .gnb .sub{
-    background-color: darkgray;
+    /* background-color: darkgray; */
     width: 100%;
     position: absolute;
-    left: 0px; top: 80px;
+    left: 0px; top: 60px;
     font-size: 1vw;
     /* display: none; */
 }
 #header .menu .gnb .sub>li a{
     display: block;
-}
-#header .menu:hover .gnb .sub>li a{
-    color: lightgray;
+    font-size: 15px;
 }
 #header .menu .sns{
     display: flex;
@@ -123,32 +115,40 @@ img{border: none; vertical-align: top;}
     
 }
 #section .sec_wrap{
-    position: relative;
+    /* position: relative; */
+    /* width: 100%; */
+    /* height: 100vh; */
+    /* overflow: hidden; */
+}
+#section .sec_wrap .section00{
+    width: 100%;
     height: 100vh;
     overflow: hidden;
 }
 #section .sec_wrap .service_banner{
     position: absolute;
-    right: 0px; top: 0px;
+    right: 0px; top: 100vh;
     z-index: -1;
     width: 30%;
     height: 100vh;
+    /* border: 1px solid yellow; */
+    background-image: url(img/service_bg.jpg);
+    background-size: cover;
 }
-#section .sec_wrap .service_banner img{
-    /* position: absolute;
-    right: 0px; top: 0px;
-    z-index: -1;
-    width: 30%;
-    height: 100vh; */
+/* #section .sec_wrap .service_banner img{
     width: 100%;
-    height: 100vh;
-}
+    height: 100%;
+    
+} */
 #section .sec_wrap .section01{
     width: 73%;
     margin: 0 auto;
+    /* margin-top: 100vh; */
     /* height: 874px; */
-    /* height: 100vh; */
-    position: relative;
+    height: 100vh;
+    /* position: relative; */
+    /* border: 1px solid blueviolet; */
+    /* background-color: aqua; */
 }
 #section .sec_wrap .section01>h2{
     padding-top: 150px;
@@ -375,7 +375,7 @@ img{border: none; vertical-align: top;}
     margin-top: 400px;
 }
 #section .sec_wrap03 .bg{
-    margin-top: -350px;
+    margin-top: -400px;
     width: 100%;
     height: 420px;
     background-image: url(img/research_bg.jpg);
@@ -415,6 +415,7 @@ img{border: none; vertical-align: top;}
 
 #section .sec_wrap04 .section04{
     width: 73%;
+    height: 100vh;
     margin: 0 auto;
     margin-top: -300px;
     /* border: 1px solid blue; */
@@ -576,80 +577,9 @@ img{border: none; vertical-align: top;}
 /* ------------------------------------------- */
 /* ------------------------------------------- */
 @media all and (min-width: 640px) and (max-width: 1024px){
-    #header .menu .hamburger .side_menu{
-        display: block;
-        position: fixed;
-        right: -60%; top: 0px;
-        width: 60%; height: 100vh;
-        background-color: white;
-        z-index: 10;
-        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.425);
-        /* border: 1px solid red; */
-    }
-    #header .side_menu .side_logo{
-        width: 20vh; height: 100px;
-        margin: 0 auto;
-        position: relative;
-    }
-    #header .side_menu .close{
-        width: 20px; height: 20px;
-        box-sizing: border-box;
-        position: absolute;
-        z-index: 1;
-        left: 45px; top: 40px;
-        /* border:1px solid red; */
-        cursor: pointer;
-    }
-    #header .side_menu .side_logo img{
-        width: 30%;
-        min-width: 120px;
-        position: absolute;
-        left: 50%; top: 50%;
-        transform: translate(-60%, -50%);
-    }
-    #header .side_menu .side{
-        height: 100%;
-    }
-    #header .side_menu .side li{
-        width: 90%; height: 100px;
-        border-bottom: 2px solid navy;
-        /* line-height: 150px; */
-        margin: 0 auto;
-        position: relative;
-        box-sizing: border-box;
-        padding-top: 70px;
-    }
-    #header .side_menu .side li a{
-        color: darknavy;
-        font-weight: bold;
-        font-size: 12pt;
-        margin-left: 10px;
-        display: block;
-        /* margin-top: 100px; */
-        width: 90%; height: 20px;
-        /* border: 1px solid red; */
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: right;
-        background-image: url(images/caret-right-solid.svg);
-    }
-
-
-
-
-
-
-
-
     
-
-
-
     #header .menu .logo{
         width: 33%; height: 45px;
-    }
-    #header .menu:hover{
-        background-color: transparent;
     }
     #header .menu .gnb{
         display: none;
@@ -676,15 +606,83 @@ img{border: none; vertical-align: top;}
     #header .menu .sns .hamburger img{
         width: 100%;
     }
+    #header .menu .sns .hamburger .side_menu{
+        display: block;
+        position: fixed;
+        right: -60%; top: 0px;
+        width: 60%; height: 100vh;
+        background-color: white;
+        z-index: 10;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.425);
+        /* border: 1px solid red; */
+    }
+    #header .menu .sns .hamburger .side_menu .side_logo{
+        width: 20vh; height: 100px;
+        margin: 0 auto;
+        position: relative;
+    }
+    #header .menu .sns .hamburger .side_menu .close{
+        width: 20px; height: 20px;
+        box-sizing: border-box;
+        position: absolute;
+        z-index: 1;
+        left: 45px; top: 40px;
+        /* border:1px solid red; */
+        cursor: pointer;
+    }
+    #header .menu .sns .hamburger .side_menu .side_logo img{
+        width: 30%;
+        min-width: 120px;
+        position: absolute;
+        left: 50%; top: 50%;
+        transform: translate(-60%, -50%);
+    }
+    #header .menu .sns .hamburger .side_menu .side{
+        height: 100%;
+    }
+    #header .menu .sns .hamburger .side_menu .side li{
+        width: 90%; height: 100px;
+        border-bottom: 2px solid navy;
+        /* line-height: 150px; */
+        margin: 0 auto;
+        position: relative;
+        box-sizing: border-box;
+        padding-top: 70px;
+    }
+    #header .menu .sns .hamburger .side_menu .side li a{
+        color: darknavy;
+        font-weight: bold;
+        font-size: 12pt;
+        margin-left: 10px;
+        display: block;
+        /* margin-top: 100px; */
+        width: 90%; height: 20px;
+        /* border: 1px solid red; */
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
+        background-image: url(images/caret-right-solid.svg);
+    }
+    #section .sec_wrap .section00{
+        width: 100%;
+        height: 50vh;
+        border: 1px solid yellow;
+
+    }
+    #section .sec_wrap .section00 img{
+        width: 100%;
+    }
     #section .sec_wrap .service_banner{
         width: 100%;
         height: 45vh;
         overflow: hidden;
-        border: 1px solid yellow;
+        /* border: 1px solid yellow; */
+        top: 50vh;
     }
 
     #section .sec_wrap .service_banner img{
         width: 100%;
+        height: 100%;
     }
     #section .sec_wrap .section01{
         width: 95%;
@@ -723,6 +721,9 @@ img{border: none; vertical-align: top;}
         writing-mode: vertical-rl;
         /* height: 25vh; */
     }
+    #section .sec_wrap03 .bg{
+        margin-top: -500px;
+    }
     #section .sec_wrap04 .section04>.careers li{
         width: 50%;
         /* border: 1px solid green; */
@@ -747,9 +748,6 @@ img{border: none; vertical-align: top;}
 @media all and (max-width:639px){
     #header .menu .logo{
         width: 33%; height: 45px;
-    }
-    #header .menu:hover{
-        background-color: transparent;
     }
     #header .menu .gnb{
         display: none;
