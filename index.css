@@ -661,7 +661,7 @@ img{border: none; vertical-align: top;}
     #section .sec_wrap .section00{
         width: 100%;
         height: 50vh;
-        border: 1px solid yellow;
+        /* border: 1px solid yellow; */
     }
     #section .sec_wrap .section00 img{
         width: 100%;
@@ -740,7 +740,7 @@ img{border: none; vertical-align: top;}
 }
 
 /* ------------------------------------------- */
-@media all and (max-width:639px){
+@media all and (min-width: 400px) and (max-width:639px){
     #header .menu .logo{
         width: 33%; height: 45px;
     }
@@ -828,7 +828,7 @@ img{border: none; vertical-align: top;}
     }
     #section .sec_wrap .section00{
         width: 100%;
-        height: 35vh;
+        height: 23vh;
         margin-top: 100px;
         /* border: 1px solid yellow; */
     }
@@ -839,7 +839,7 @@ img{border: none; vertical-align: top;}
     #section .sec_wrap .service_banner{
         width: 100%;
         height: 60vh;
-        margin-top: -80px;
+        margin-top: -580px;
         overflow: hidden;
         /* border: 1px solid yellow; */
     }
@@ -849,12 +849,18 @@ img{border: none; vertical-align: top;}
     }
     #section .sec_wrap .section01{
         width: 95%;
+        height: 50vh;
     }
     #section .sec_wrap .section01>h2{
-        font-size: 3rem;
+        padding-top: 50px;
+        font-size: 2rem;
     }
     #section .sec_wrap .section01 .services p{
         display: none;
+    }
+    #section .sec_wrap .section01 .services li{
+        width: 140px; height: 80px;
+        background-color: white;
     }
     #section .sec_wrap .section01 .banner{
         display: none;
@@ -862,10 +868,16 @@ img{border: none; vertical-align: top;}
     #section .sec_wrap .section01 .banner .banner_txt{
         display: none;
     }
-
+    #section .sec_wrap02{
+        height: 500px;
+    }
+    #section .sec_wrap02 .solid{
+        height: 250px;
+    }
     #section .sec_wrap02 .section02 .building{
         margin: 150px;
     }
+
     #section .sec_wrap02 .section02>h2{
         font-size: 6vw;
         top: 100px;
@@ -883,11 +895,17 @@ img{border: none; vertical-align: top;}
         height: 15vh;
     }
 
-    #section .sec_wrap03 .section03 .research li a{
+    #section .sec_wrap03 .section03 .research>li>a{
         margin-top: 250px;
         font-size: 3vw;
         writing-mode: vertical-rl;
         /* height: 25vh; */
+    }
+    #section .sec_wrap02 .section02 .introduction li{
+        height: 150px;
+    }
+    #section .sec_wrap02 .section02 .introduction li img{
+        margin-top: 10px;
     }
     #section .sec_wrap02 .section02 .introduction li h6{
         font-size: 3vw;
@@ -910,6 +928,9 @@ img{border: none; vertical-align: top;}
     #section .sec_wrap04 .section04>.careers li:nth-child(3){
         background-color: #14235D;
     }
+    #section .sec_wrap04 .section04 .careers>li>a>h3{
+        display: none;
+    }
     /* #footer .ft_logo li{
         width: 20%; height: 115px;
         text-align: center;
@@ -928,3 +949,7 @@ img{border: none; vertical-align: top;}
         bottom: 30px;
     }
 }
+/* ------------------------------------------- */
+/* @media all and (max-width: 400px){
+    
+} */
