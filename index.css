@@ -1,4 +1,4 @@
-@charset "UFT-8";
+@charset "UTF-8";
 
 *{  
     margin: 0; padding: 0;
@@ -119,6 +119,8 @@ img{border: none; vertical-align: top;}
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    background-image: url(img/section00_01.jpg);
+    background-size: cover;
 }
 #section .sec_wrap .service_banner{
     position: absolute;
@@ -127,18 +129,17 @@ img{border: none; vertical-align: top;}
     width: 30%;
     height: 100vh;
     /* border: 1px solid yellow; */
-    background-image: url(img/service_bg.jpg);
-    background-size: cover;
+    
 }
 /* #section .sec_wrap .service_banner img{
     width: 100%;
-    height: 100%;
+    height: 100vh;
     
 } */
 #section .sec_wrap .section01{
     width: 73%;
     margin: 0 auto;
-    /* margin-top: 100vh; */
+    margin-top: 0vh;
     /* height: 874px; */
     height: 100vh;
     /* position: relative; */
@@ -240,7 +241,7 @@ img{border: none; vertical-align: top;}
 #section .sec_wrap02 .section02>h3{
     font-size: 64px;
     position: absolute;
-    left: 50%;; top: 450px;
+    left: 50%; top: 450px;
 }
 #section .sec_wrap02 .section02 .introduction{
     position: absolute;
@@ -264,12 +265,14 @@ img{border: none; vertical-align: top;}
     width: 0%;
     height: 258px;
     position: absolute;
-    left: 50%; top: 0px;
-    border-top: 2px solid navy;
+    left: 50%; 
+    top: 0px;
+    transform: translateX(-50%);
+    border-top: 2px solid red;
     border-bottom: 2px solid navy;
     box-sizing: border-box;
     transition: all 0.2s;
-    transform: translateX(-50%);
+    
 }
 #section .sec_wrap02 .section02 .introduction li:hover:before{
     width: 100%;
